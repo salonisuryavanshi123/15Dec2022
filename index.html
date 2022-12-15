@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form</title>
+        <link href="./css/style.css" rel="stylesheet">
+
+        <script src="./js/style.js"></script>
+
+        <script>
+            //Before the closing of head tag
+        </script>
+    </head>
+    <body>
+        
+    
+        <form>
+            <input type="text" name="fname" placeholder="Enter your first name">
+            <input type="text" name="lname" placeholder="Enter your last name">
+            <input type="submit" value="save" onclick="saveData(event)">
+        </form>
+        <ul id="myul">
+            <li></li>
+        </ul>
+
+        <script>
+            //Before the closing of body tag
+
+            let myul = document.getElementById("myul");
+
+            myul.innerHTML = "";
+
+            //1. Function Defination
+            function saveData(e){ //e = event  formal argument
+                //1. Object.Property
+                //2. Object.method();
+                e.preventDefault();
+                console.log("hi");
+                let fn = document.querySelector('input[name="fname"]');
+                let sn = document.querySelector('input[name="lname"]')
+                //2. Object.method();
+                console.log(fn.value);
+                console.log(sn.value);
+                myul.innerHTML += '<li>'+fn.value+" "+sn.value+'</li>';
+            }    
+        </script>
+        
+    </body>
+</html>
